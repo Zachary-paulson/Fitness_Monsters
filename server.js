@@ -5,7 +5,7 @@ const exphbs = require("express-handlebars");
 const db = require("./models");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 //modules for passport
 const passport = require('passport');
