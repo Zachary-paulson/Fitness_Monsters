@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "fitness-monsters",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -11,11 +11,15 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
+    "cookie-session": "^1.3.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0",
+    "password": "^0.1.1",
+    "sequelize": "^5.8.5"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -26,5 +30,17 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zachary-paulson/Fitness_Monsters.git"
+  },
+  "author": "Zachary, nate, Nicolloe",
+  "bugs": {
+    "url": "https://github.com/Zachary-paulson/Fitness_Monsters/issues"
+  },
+  "homepage": "https://github.com/Zachary-paulson/Fitness_Monsters#readme"
 }
