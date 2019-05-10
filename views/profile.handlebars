@@ -1,11 +1,33 @@
-<nav>
-    <ul>
-        <li><a href="/logout">logout</a></li>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/">Home Page</a></li>
-    </ul>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a href="/"><img src="assets/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/joggster">Play game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/logout">logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <head>
     <h1>WELCOME TO YOUR PROFILE PAGE</h1>
 </head>
+
+<div class="container-fluid padding">
+    <div class="row"></div>
+</div>
