@@ -2,6 +2,11 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
 const db = require('../models');
 
+const {google} = require('googleapis');
+const apis = google.getSupportedAPIs();
+
+console.log("google api: ", apis);
+
 //store the session in a cookie
 passport.serializeUser((user, done) => {
     done(null, user.id);
