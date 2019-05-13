@@ -30,6 +30,7 @@ passport.use(
         clientID: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET
     }, (accessToken, refreshToken, profile, done) => {
+        
         db.User.findOne({
             where: { googleId: profile.id }
         }).then(currentuser => {
@@ -46,7 +47,7 @@ passport.use(
                     thumbNail: profile._json.picture
                 }).then(newUser => {
                     //console.log('New User was added: ' + newUser);
-                    getSteps(profile.id);
+                    getSteps(profile.id, accessToken);
                     done(null, newUser);
                 });
             }//end if
@@ -58,11 +59,17 @@ passport.use(
 );
 
 
-function getSteps(user){
+function getSteps(user, token){
+
     
     let url = 'https://www.googleapis.com/fitness/v1/'+ user + '/me/dataSources';
-    console.log(typeof(url));
-    axios.get(url).then(response => {
+    axios({
+        method: 'GET',
+        url: url,
+        headers : {
+            'Authorization':'Bearer' + token 
+        }
+    }).then(response => {
         console.log(response);
     }).catch(e => {
         console.log('Oops, there was an Error:', e);
