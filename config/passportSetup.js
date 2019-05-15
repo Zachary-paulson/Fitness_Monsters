@@ -31,13 +31,14 @@ passport.use(
         clientSecret: process.env.GOOGLE_SECRET
     }, (accessToken, refreshToken, profile, done) => {
         
+
         db.User.findOne({
             where: { googleId: profile.id }
         }).then(currentuser => {
             //Determine if the users is already in the db
             if (currentuser) {
                 //console.log('User is:', currentuser);
-                getSteps(profile.id);
+                getSteps(accessToken);
                 done(null, currentuser);
             } else {
                 //Add new user if not in the db
@@ -47,34 +48,41 @@ passport.use(
                     thumbNail: profile._json.picture
                 }).then(newUser => {
                     //console.log('New User was added: ' + newUser);
-                    getSteps(profile.id, accessToken);
+                    console
+                    getSteps(accessToken);
                     done(null, newUser);
                 });
             }//end if
         });
-
-        
-        console.log('passport callback function fired');
     })
 );
 
 
-function getSteps(user, token){
-
-    
-    let url = 'https://www.googleapis.com/fitness/v1/'+ user + '/me/dataSources';
+function getSteps(token) {
+    console.log('This is the token', token);
+        //let url = 'https://www.googleapis.com/fitness/v1/users/me/dataSources'
+    let url = 'https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate'
     axios({
-        method: 'GET',
+        method: 'POST',
         url: url,
-        headers : {
-            'Authorization':'Bearer' + token 
+        headers: {
+            'Content-Type': 'application/json;encoding=utf-8',
+            'Authorization': 'Bearer ' + token
         }
-    }).then(response => {
-        console.log(response);
-    }).catch(e => {
-        console.log('Oops, there was an Error:', e);
-    });
-
+        , body: {
+            aggregateBy: [{
+                dataTypeName: 'com.google.step_count.delta'
+                //dataSourceId: 'derived:com.google.step_count.delta:com.google.android.gms:estimated_steps'
+            }],
+            bucketByTime: { durationMillis: 86400000 },
+            startTimeMillis: 1438705622000,
+            endTimeMillis: 1439310422000
+        }
+    }).then(res => {
+        console.log(res)
+    }).catch(e => console.log('There was an error:', e));
 }
+
+
 
 
