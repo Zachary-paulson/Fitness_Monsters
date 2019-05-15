@@ -1,28 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
 /* CSS reset */
+
 html, body{
   height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
+  font-family: 'Russo One', sans-serif; 
+  background: url(../imgs/bananas.png);
+
+}
+
+#logo {
+  height: 50px;
+  width: 150px;
 }
 
 .navbar{
   padding: .8rem;
+  background-color: goldenrod;
 }
 .navbar-nav li {
   padding-right: 25px;
+  background-color: goldenrod;
+
 }
 
-.nav-link{
+
+.nav-link {
   font-size: 1.1em !important;
 }
 
+#main {
+  margin: 50px;
+  border: 50px;
+  padding: 15px;
+}
 
-footer {
-  background-color: #3f3f3f;
+.section {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+.row:before,
+.row:after { content:""; display:table; }
+.row:after { clear:both;}
+.row { zoom:1; /* For IE 6/7 */ }
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color:goldenrod;
   color: #d5d5d5;
   padding-top: 2rem; 
+
+
 }
 
 hr.light {
@@ -35,6 +72,12 @@ hr.light {
 
 
 /*---Media Queries --*/
+
+@media only screen and (max-width: 768px) {
+  .col {  margin: 1% 0 1% 0%; }
+  [class*='grid_'] { width: 100%; }
+}
+
 @media (max-width: 992px) {
   .social a {
     font-size: 4em;
