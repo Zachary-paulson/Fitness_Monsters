@@ -31,18 +31,30 @@ html, body{
 }
 
 #main {
-  margin: 50px;
+  overflow: auto;
   border: 50px;
-  padding: 15px;
+  padding: 75px;
+  
+}
+
+.about {
+  font-size: 2rem;
 }
 
 .section {
   clear: both;
-  margin: 0px;
-  padding: 0px;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 3px;
+  border-color: darkgoldenrod;
 }
 
-
+#gif {
+  float: center;
+  margin: 20px;
+  padding: 20px;
+}
 
 
 .row:before,
@@ -51,14 +63,14 @@ html, body{
 .row { zoom:1; /* For IE 6/7 */ }
 
 
+
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   background-color:goldenrod;
-  color: #d5d5d5;
+  color:  #007BFF;
   padding-top: 2rem; 
-
+  position: fixed;
 
 }
 
@@ -69,7 +81,13 @@ hr.light {
   margin-bottom: 1rem;
 }
 
+.card {
+  border: 3px solid;
+}
 
+.btn {
+  color: #007BFF;
+}
 
 /*---Media Queries --*/
 
