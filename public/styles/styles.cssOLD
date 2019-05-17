@@ -1,0 +1,133 @@
+
+
+/* CSS reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Russo One', sans-serif;
+  background: url(../imgs/bananas.png);
+
+}
+
+#logo {
+  height: 50px;
+  width: 150px;
+}
+
+.navbar{
+  padding: .8rem;
+  background-color: goldenrod;
+}
+.navbar-nav li {
+  padding-right: 25px;
+  background-color: goldenrod;
+}
+
+.jumbotron{
+  background: none;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+  background: red;
+}
+
+/* .section {
+  clear: both;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 3px;
+  border-color: darkgoldenrod;
+} */
+
+#gif {
+  float: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.row:before,
+.row:after { content:""; display:table; }
+.row:after { clear:both;}
+.row { zoom:1; /* For IE 6/7 */ }
+
+
+
+.footer {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  margin-top: -100px;
+  background-color:goldenrod;
+  color:  #007BFF;
+  padding-top: 2rem;
+  clear:both;
+  /* position: fixed; */
+
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 3px solid;
+}
+
+.btn {
+  color: #007BFF;
+}
+
+/*---Media Queries --*/
+
+@media only screen and (max-width: 768px) {
+  .col {  margin: 1% 0 1% 0%; }
+  [class*='grid_'] { width: 100%; }
+}
+
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+
+
+}
+@media (max-width: 576px) {
+
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}

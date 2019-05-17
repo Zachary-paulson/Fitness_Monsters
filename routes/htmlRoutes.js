@@ -19,8 +19,8 @@ module.exports = app => {
   });
 
   app.get('/profile', authCheck, (req, res) => {
-    console.log(req.user);
-    res.render('profile', { userThumbNail: req.user });
+    console.log("testing", req.user);
+    res.render('profile', { user: req.user});
   });
 
   app.get('/logout', (req, res) => {
