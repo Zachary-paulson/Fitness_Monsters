@@ -11,15 +11,18 @@ const authCheck = (req, res, next) => {
 module.exports = app => {
   // Load index page
   app.get("/", (req, res) => {
-    res.render('index');
+    res.render('index', {
+      user: req.user
+    });
   });
 
   app.get("/joggster", authCheck, (req, res) => {
-    res.render('game');
+    res.render('game', {
+      user: req.user
+    });
   });
 
   app.get('/profile', authCheck, (req, res) => {
-    console.log("testing", req.user);
     res.render('profile', {
       user: req.user
     });

@@ -16,12 +16,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="/profile">Profile</a>
               </li>
+              {{#if user}}
               <li class="nav-item">
                 <a class="nav-link active" href="/logout">logout</a>
               </li>
+              {{else }}
               <li class="nav-item">
                 <a class="nav-link" href="/auth/login">Login</a>
               </li>
+              {{/if}}
             </ul>
           </div>
         </div>
