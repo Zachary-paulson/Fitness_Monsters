@@ -17,13 +17,13 @@
                 <a class="nav-link" href="/profile">Profile</a>
               </li>
               {{#if user}}
-              <li class="nav-item">
-                <a class="nav-link active" href="/logout">logout</a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/logout">logout</a>
+                </li>
               {{else }}
-              <li class="nav-item">
-                <a class="nav-link" href="/auth/login">Login</a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/auth/login">Login</a>
+                </li>
               {{/if}}
             </ul>
           </div>
@@ -32,6 +32,30 @@
     </header>
 
     <main>
+      <div class="modal fade" id="getSteps">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Please enter your steps</h2>
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input id="steps" type="number" class="form-control" aria-describedby="steps" placeholder="How many steps did you take?">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="container">
         <div class="row profile">
           <div class="col-md-3">
@@ -50,8 +74,7 @@
               <!-- END SIDEBAR USER TITLE -->
               <!-- SIDEBAR BUTTONS -->
               <div class="profile-userbuttons">
-                <button type="button" class="btn btn-success btn-sm">Add steps</button>
-
+                <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#getSteps">Add steps</button>
               </div>
               <!-- END SIDEBAR BUTTONS -->
 
@@ -70,11 +93,8 @@
           </div>
         </div>
       </div>
-
     </main>
-
   </div>
-
 </div>
 
 
