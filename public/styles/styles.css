@@ -5,7 +5,7 @@
 html, body{
   height: 100%;
   width: 100%;
-  font-family: 'Russo One', sans-serif; 
+  font-family: 'Russo One', sans-serif;
   background: url(../imgs/bananas.png);
 
 }
@@ -22,9 +22,11 @@ html, body{
 .navbar-nav li {
   padding-right: 25px;
   background-color: goldenrod;
-
 }
 
+.jumbotron{
+  background: none;
+}
 
 .nav-link {
   font-size: 1.1em !important;
@@ -34,7 +36,7 @@ html, body{
   overflow: auto;
   border: 50px;
   padding: 75px;
-  
+
 }
 
 .about {
@@ -69,8 +71,8 @@ html, body{
   width: 100%;
   background-color:goldenrod;
   color:  #007BFF;
-  padding-top: 2rem; 
-  position: fixed;
+  padding-top: 2rem;
+  /* position: fixed; */
 
 }
 
@@ -103,11 +105,11 @@ hr.light {
   }
 }
 @media (max-width: 768px) {
-  
-  
+
+
 }
 @media (max-width: 576px) {
-  
+
 
 
 /*---Firefox Bug Fix --*/
@@ -172,11 +174,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
-

@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "(Zenith)6014",
+    "password": "lov3tolive",
     "database": "auth_users_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "idZfxoMrTCGDzIHJZe70",
+    "password": "lov3tolive",
     "database": "auth_users_db",
     "host": "localhost",
     "dialect": "mysql",
