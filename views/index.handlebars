@@ -16,12 +16,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="/profile">Profile</a>
               </li>
+              {{#if user}}
               <li class="nav-item">
                 <a class="nav-link active" href="/logout">logout</a>
               </li>
+              {{else }}
               <li class="nav-item">
                 <a class="nav-link" href="/auth/login">Login</a>
               </li>
+
+              {{/if}}
             </ul>
           </div>
         </div>
@@ -38,7 +42,8 @@
               <h1 class="display-4 text-center">Welcome to Joggsters!</h1>
               <p class="lead">Come and join others on a journey with your very own ditial pet.</p>
               <hr class="my-4">
-              <p>People walk every day, but it’s not very rewarding. What if you got points for getting out of the house? This is what our Web app aims to do. With our Application you will be rewarded for each step you take. These points can then be used
+              <p>People walk every day, but it’s not very rewarding. What if you got points for getting out of the house? This is what our Web app aims to do. With our Application you will be rewarded for each step you take. These points can then be
+                used
                 to take care of your very own virtual pet!</p>
               <p class="lead text-right">
                 <a class="btn btn-primary btn-lg" href="#" role="button">Sign up</a>
