@@ -19,28 +19,30 @@ module.exports = app => {
   });
 
   app.get('/profile', authCheck, (req, res) => {
-    console.log(req.user);
-    res.render('profile', { userThumbNail: req.user });
+    console.log("testing", req.user);
+    res.render('profile', {
+      user: req.user
+    });
   });
 
   app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
-});
+  });
 
-app.get('/auth/login', (req, res) => {
+  app.get('/auth/login', (req, res) => {
     res.render('login');
-});
+  });
 
-app.get('/auth/google', passport.authenticate('google', {
+  app.get('/auth/google', passport.authenticate('google', {
     scope: ['profile']
-}));
+  }));
 
-app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+  app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     res.redirect('/profile');
-});
+  });
 
-app.get('*', (req,res) =>{
-  res.render('404');
-});
+  app.get('*', (req, res) => {
+    res.render('404');
+  });
 }

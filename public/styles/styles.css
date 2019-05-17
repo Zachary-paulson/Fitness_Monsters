@@ -1,182 +1,152 @@
-
-
 /* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html, body{
+html, body {
   height: 100%;
-  width: 100%;
-  font-family: 'Russo One', sans-serif; 
-  background: url(../imgs/bananas.png);
-
+  width: 100% font-family: 'Russo One', sans-serif;
+  background: url(../imgs/backgrounds/background.png);
 }
 
-#logo {
-  height: 50px;
-  width: 150px;
+body {
+  position: relative;
+  padding-bottom: 112px:
 }
 
-.navbar{
+/* Navigation bar */
+.navbar {
   padding: .8rem;
-  background-color: goldenrod;
+  background: goldenrod;
 }
+
 .navbar-nav li {
   padding-right: 25px;
   background-color: goldenrod;
-
 }
-
 
 .nav-link {
   font-size: 1.1em !important;
 }
 
-#main {
-  overflow: auto;
-  border: 50px;
-  padding: 75px;
-  
+/* landing page jumbotron */
+.jumbotron {
+  background: rgba(220, 220, 220, 0.2);
+  padding: 1rem;
+  border-radius: 0;
 }
 
-.about {
-  font-size: 2rem;
-}
-
-.section {
-  clear: both;
-  margin: 20px;
-  padding: 20px;
-  background-color: white;
-  border: 3px;
-  border-color: darkgoldenrod;
-}
-
-#gif {
-  float: center;
-  margin: 20px;
-  padding: 20px;
-}
-
-
-.row:before,
-.row:after { content:""; display:table; }
-.row:after { clear:both;}
-.row { zoom:1; /* For IE 6/7 */ }
-
-
-
-.footer {
-  bottom: 0;
-  width: 100%;
-  background-color:goldenrod;
-  color:  #007BFF;
-  padding-top: 2rem; 
-  position: fixed;
-
-}
-
-hr.light {
-  border-top: 1px solid #d5d5d5;
-  width: 75%;
-  margin-top: .8rem;
-  margin-bottom: 1rem;
-}
-
-.card {
-  border: 3px solid;
-}
-
-.btn {
-  color: #007BFF;
-}
-
-/*---Media Queries --*/
-
-@media only screen and (max-width: 768px) {
-  .col {  margin: 1% 0 1% 0%; }
-  [class*='grid_'] { width: 100%; }
-}
-
-@media (max-width: 992px) {
-  .social a {
-    font-size: 4em;
-    padding: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  
-  
-}
-@media (max-width: 576px) {
-  
-
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-/*--- Fixed Background Image --*/
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0!important;
-}
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
+/* Footer */
+footer {
+  background: goldenrod;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  height: 112px;
   width: 100%;
-  height: 100%;
-}
-#fixed {
-  background-image: url('img/mac.png');
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
-}
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 1rem;
 }
 
+/* profile CSS */
+.profile {
+  margin: 20px 0;
+}
 
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
 
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
 
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
 
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
 
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
 
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
 
+.profile-usermenu {
+  margin-top: 30px;
+}
 
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
 
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
 
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
 
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
 
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
 
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
 
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
